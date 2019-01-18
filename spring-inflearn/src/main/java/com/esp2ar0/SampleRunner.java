@@ -6,13 +6,17 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
 @Component
-public class HolomanRunner implements ApplicationRunner {
+public class SampleRunner implements ApplicationRunner {
 
     @Autowired
-    Holoman holoman;
+    ChangHwanProperties changHwanProperties;
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        System.out.println(holoman);
+        System.out.println("======================");
+        System.out.println(changHwanProperties.getName());
+        System.out.println(changHwanProperties.getAge());
+        System.out.println("======================");
+
     }
 }
